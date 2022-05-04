@@ -1,6 +1,11 @@
 import React from "react";
 import { StyleSheet, Image, Dimensions, Text } from "react-native";
+import { View } from "react-native";
+import { borderLeftColor } from "react-native/Libraries/Components/View/ReactNativeStyleAttributes";
 import topo from "../../assets/topo.png";
+import logo from "../../assets/logo.png";
+import { useFonts, Inter_900Black } from '@expo-google-fonts/inter';
+import Texto from "../Componentes/Texto";
 
 const width = Dimensions.get("screen").width;
 
@@ -8,7 +13,21 @@ export default function Cesta() {
   return (
     <>
       <Image source={topo} style={estilos.topo} />
-      <Text style={estilos.titulo}>Detalhes da cesta</Text>
+      <Texto style={estilos.titulo}>Detalhes da cesta</Texto>
+      <View style={estilos.cesta}>
+        <Texto style={estilos.nome}>Cesta de Verduras</Texto>
+        <View style={estilos.fazenda}>
+        <Image style={estilos.imagemFazenda} source={logo} />
+        <Texto style={estilos.nomeFazenda}>Jenny Jack Farm</Texto>
+        </View>
+        <Texto style={estilos.descricao}>
+          Uma cesta com produtos selecionados cuidadosamente da fazenda direto
+          para a sua cozinha
+        </Texto>
+        <Texto style={estilos.preco}>
+            R$ 40,00
+        </Texto>
+      </View>
     </>
   );
 }
@@ -19,13 +38,48 @@ const estilos = StyleSheet.create({
     height: (578 / 768) * width,
   },
   titulo: {
-      width: '100%',
-      position: "absolute",
-      textAlign: "center",
-      fontSize: 16, 
-      lineHeight: 26,
-      color: "white",
-      fontWeight: "bold", 
-      padding: 16
-  }
+    width: "100%",
+    position: "absolute",
+    textAlign: "center",
+    fontSize: 16,
+    lineHeight: 26,
+    color: "white",
+    fontWeight: "bold",
+    padding: 16,
+  },
+  cesta: {
+    paddingVertical: 8,
+    paddingHorizontal: 16,
+  },
+  nome: {
+    color: "#464646",
+    fontSize: 26,
+    lineHeight: 42,
+    fontWeight: "bold",
+  },
+  fazenda: {
+    flexDirection: "row",
+    paddingVertical: 12,
+  },
+ imagemFazenda: {
+    width: 32,
+    height: 32,
+  },
+  nomeFazenda: {
+    fontSize: 16,
+    lineHeight: 26,
+    marginLeft: 12,
+  },
+  descricao: {
+    color: "#a3a3a3",
+    fontSize: 16,
+    lineHeight: 26,
+  },
+  preco: {
+    color: "#2a9f85",
+    fontWeight: "bold",
+    fontSize: 26,
+    lineHeight: 42,
+    marginTop: 8,
+  },
 });
