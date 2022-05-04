@@ -1,3 +1,3 @@
 # react-native
 
-Primeiro projeto desenvolido em react native baseado no curso da Alura
+Primeiro projeto desenvolvido em react native baseado no curso da Alura
