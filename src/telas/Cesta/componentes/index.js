@@ -5,7 +5,7 @@ import { borderLeftColor } from "react-native/Libraries/Components/View/ReactNat
 import topo from "../../assets/topo.png";
 import logo from "../../assets/logo.png";
 import { useFonts, Inter_900Black } from '@expo-google-fonts/inter';
-import Texto from "../Componentes/Texto";
+import Texto from "../../../Componentes/Texto";
 
 const width = Dimensions.get("screen").width;
 
