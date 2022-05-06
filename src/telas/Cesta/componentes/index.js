@@ -4,6 +4,7 @@ import { View } from "react-native";
 import Topo from "./Topo";
 import Detalhes from "./Detalhes";
 import Botao from "../../../componentes/Botao";
+import Itens from "../componentes/Itens";
 
 export default function Cesta({ topo, detalhes }) {
   return (
@@ -12,6 +13,7 @@ export default function Cesta({ topo, detalhes }) {
       <View style={estilos.cesta}>
         <Detalhes {...detalhes} />
         <Botao>{detalhes.botao}</Botao>
+        <Itens />
       </View>
     </>
   );
