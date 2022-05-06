@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Image, View } from "react-native";
+import { StyleSheet, Image, View, Button } from "react-native";
 import Texto from "../../../componentes/Texto";
 
 export default function Detalhes({
@@ -8,6 +8,7 @@ export default function Detalhes({
   logoFazenda,
   descricao,
   preco,
+  botao
 }) {
   return (
     <>
@@ -18,6 +19,7 @@ export default function Detalhes({
       </View>
       <Texto style={estilos.descricao}>{descricao}</Texto>
       <Texto style={estilos.preco}>{preco}</Texto>
+      <Button title={botao}/>
     </>
   );
 }
