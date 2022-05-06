@@ -1,16 +1,17 @@
 import React from "react";
-import { StyleSheet, Image, Dimensions, Text } from "react-native";
+import { StyleSheet } from "react-native";
 import { View } from "react-native";
 import Topo from "./Topo";
 import Detalhes from "./Detalhes";
+import Botao from "../../../componentes/Botao";
 
-
-export default function Cesta({topo, detalhes}) {
+export default function Cesta({ topo, detalhes }) {
   return (
     <>
       <Topo {...topo} />
       <View style={estilos.cesta}>
         <Detalhes {...detalhes} />
+        <Botao>{detalhes.botao}</Botao>
       </View>
     </>
   );
@@ -20,5 +21,5 @@ const estilos = StyleSheet.create({
   cesta: {
     paddingVertical: 8,
     paddingHorizontal: 16,
-  }
+  },
 });
